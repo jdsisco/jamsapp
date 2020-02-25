@@ -18,4 +18,5 @@ app.get("/form", function(req,res){
 app.post("/results", function(req,res){
     res.render("form.hbs", {lorem:req.body.last + " - " + req.body.email});
 });
-app.listen(3000, ()=>{console.log("Server running on port 3000")})
+const port = process.env.PORT || 80
+app.listen(port, ()=>{console.log("Server running on port")})
